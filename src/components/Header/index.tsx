@@ -7,6 +7,24 @@ import Link from "next/link";
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const routes = [
+    {
+      id: 1,
+      path: "/",
+      name: "Home",
+    },
+    {
+      id: 2,
+      path: "/about",
+      name: "About",
+    },
+    {
+      id: 3,
+      path: "/contact",
+      name: "Contact",
+    },
+  ];
+
   return (
     <header className="bg-white">
       <nav
@@ -34,26 +52,16 @@ export default function Header() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          <Link
-            href="/"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
-            Home
-          </Link>
-
-          <Link
-            href="/about"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
-            About
-          </Link>
-
-          <Link
-            href="/contact"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
-            Contact
-          </Link>
+          {routes.map((item) => {
+            return (
+              <Link
+                href={item?.path}
+                className="text-sm font-semibold leading-6 text-gray-900"
+              >
+                {item?.name}
+              </Link>
+            );
+          })}
         </div>
       </nav>
       <Dialog
@@ -85,24 +93,16 @@ export default function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Home
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  About Me
-                </a>
-                <a
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Contact
-                </a>
+                {routes.map((item) => {
+                  return (
+                    <Link
+                      href={item?.path}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >
+                      {item?.name}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>
