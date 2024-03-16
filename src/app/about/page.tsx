@@ -88,7 +88,7 @@ function index() {
               >
                 <div className="flex items-center justify-between py-2">
                   <p>{item?.degree}</p>
-                  <span className="bg-green-200 px-2 rounded-2xl">
+                  <span className="bg-green-200 px-5 py-1 rounded-2xl">
                     Full Time
                   </span>
                 </div>
