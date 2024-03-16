@@ -59,6 +59,7 @@ export default function Header() {
           {routes.map((item) => {
             return (
               <Link
+                key={item.id}
                 href={item?.path}
                 className={`text-sm font-semibold leading-6 text-gray-900 ${
                   pathname && pathname === item.path ? "underline" : ""
