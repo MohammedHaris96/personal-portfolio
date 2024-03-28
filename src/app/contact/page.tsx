@@ -16,32 +16,13 @@ const index = () => {
       <div className="flex flex-col items-center gap-6 md:gap-12">
         <div className="flex flex-col items-center md:gap-4">
           <div className="flex items-center gap-4 md:gap-5">
-            {/* <Mail className="h-6 w-6 md:h-8 md:w-8" /> */}
-            {/* <Link href={`mailto:${email}`}> */}
             <p>email</p>
-            {/* </Link> */}
-            {/* <IconButton
-              size={width && width < 768 ? "md" : "lg"}
-              onClick={() => handleCopyClick(email, "email")}
-              showTooltip={isCopied && copiedValueType === "email"}
-              tooltipText="Copied!"
-            >
-              <Copy />
-            </IconButton> */}
+
           </div>
           <div className="flex items-center gap-4 md:gap-5">
             {/* <Phone className="h-6 w-6 md:h-8 md:w-8" /> */}
             {/* <Link href={`tel:${phone.replace(' ', '')}`}> */}
             <p>phone</p>
-            {/* </Link> */}
-            {/* <IconButton
-              size={width && width < 768 ? "md" : "lg"}
-              onClick={() => handleCopyClick(phone.replace(" ", ""), "phone")}
-              showTooltip={isCopied && copiedValueType === "phone"}
-              tooltipText="Copied!"
-            >
-              <Copy />
-            </IconButton> */}
           </div>
         </div>
         <div className="flex flex-col items-center gap-2">
